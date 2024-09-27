@@ -17,10 +17,9 @@
     <ion-list>
       <ion-item>
 
-        <ion-select required aria-required="true" role="listbox" [attr.aria-label]="'Required'" cancelText="Cancel"
-          class="custom-dropdown-box" interface="action-sheet" placeholder="Select a question">
+        <ion-select cancelText="Cancel" interface="action-sheet" placeholder="Select a question">
           @for (ques of secQuestions; track ques) {
-          <ion-select-option value={{ques.questionCd}}><span> {{ques.question}}</span></ion-select-option>
+          <ion-select-option value="{{ques.questionCd}}">{{ques.question}}</ion-select-option>
           }
         </ion-select>
       </ion-item>
