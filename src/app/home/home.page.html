@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-list>
+      <ion-item>
+
+        <ion-select required aria-required="true" role="listbox" [attr.aria-label]="'Required'" cancelText="Cancel"
+          class="custom-dropdown-box" interface="action-sheet" placeholder="Select a question">
+          @for (ques of secQuestions; track ques) {
+          <ion-select-option value={{ques.questionCd}}><span> {{ques.question}}</span></ion-select-option>
+          }
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
