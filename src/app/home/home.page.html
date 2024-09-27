@@ -13,16 +13,13 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <ion-list>
-      <ion-item>
-
-        <ion-select cancelText="Cancel" interface="action-sheet" placeholder="Select a question">
-          @for (ques of secQuestions; track ques) {
-          <ion-select-option value="{{ques.questionCd}}">{{ques.question}}</ion-select-option>
-          }
-        </ion-select>
-      </ion-item>
-    </ion-list>
-  </div>
+  <ion-list>
+    <ion-item>
+      <ion-select cancelText="Cancel" interface="action-sheet" placeholder="Select a question">
+        @for (ques of secQuestions; track ques) {
+        <ion-select-option value="{{ques.questionCd}}">{{ques.question}}</ion-select-option>
+        }
+      </ion-select>
+    </ion-item>
+  </ion-list>
 </ion-content>
